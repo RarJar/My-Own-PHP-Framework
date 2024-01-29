@@ -9,9 +9,7 @@
     <?php
 
     require("./boot.php");
-
-    $pdo = Database::connect();
-
+    
     $query = new QueryBuilder($pdo);
     $blogs = $query->selectAll('blogs');
 
