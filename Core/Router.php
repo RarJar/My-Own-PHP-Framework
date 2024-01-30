@@ -8,10 +8,8 @@ class Router{
     }
 
     public function direct($uri){
-        if($uri === ''){
-            return require("./Src/Views/home.view.php");
+        if (array_key_exists($uri, $this->routes)) {
+            require($this->routes[$uri]);
         }
     }
 }
-
-$route = new Router([]);
