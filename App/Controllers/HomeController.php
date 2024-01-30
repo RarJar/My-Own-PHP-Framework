@@ -1,3 +1,3 @@
 <?php
 
-echo "Home";
+require "./Src/Views/home.view.php";
